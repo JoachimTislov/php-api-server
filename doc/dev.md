@@ -45,4 +45,4 @@ View [Makefile](./Makefile) for more details
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
 
-View [Composer json](./composer.json) for more details
+View [Composer.json](./composer.json) and [package.json](./package.json) for more details
