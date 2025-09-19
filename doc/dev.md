@@ -4,7 +4,7 @@ Expected environment is Linux (Arch Linux preferred)
 
 Starting point [Vue template - starter kit](https://github.com/laravel/vue-starter-kit)
 
-[Budget app plan](./doc/budget-app-plan.md)
+[Budget app plan](budget-app-plan.md)
 
 ## Development setup
 
@@ -13,11 +13,10 @@ Starting point [Vue template - starter kit](https://github.com/laravel/vue-start
 - LSP: [phpactor](https://github.com/phpactor/phpactor)
 
 ### Database
-Production: [MariaDB](https://wiki.archlinux.org/title/MariaDB)
-Development: [MariaDB](https://wiki.archlinux.org/title/MariaDB), [Sqlite](https://www.sqlite.org/index.html) or [in memory](https://laravel.com/docs/12.x/database#in-memory-sqlite-testing)
-
-**Important to uncomment pdo_sqlite or pdo_mysql in /etc/php/php.ini, depending on your database choice**
-Failure to do so will cause Laravel to throw a "can't find driver" error
+- Production: [MariaDB](https://wiki.archlinux.org/title/MariaDB)
+- Development: [MariaDB](https://wiki.archlinux.org/title/MariaDB), [Sqlite](https://www.sqlite.org/index.html) or [in memory](https://laravel.com/docs/12.x/database#in-memory-sqlite-testing)
+- **Important to uncomment pdo_sqlite or pdo_mysql in /etc/php/php.ini, depending on your database choice**
+- Failure to do so will cause Laravel to throw a "can't find driver" error
 
 ### Commands
 
@@ -27,15 +26,11 @@ View [Makefile](./Makefile) for more details
 
 - Use global variables for strings to avoid destructive typos
 
-## Docs
-
-- [Laravel 12.x docs](https://laravel.com/docs/12.x)
-
-## Tech Stack
+## Docs & Tech Stack
 
 **Backend:**
 - [PHP](https://www.php.net/)
-- [Laravel](https://laravel.com/)
+- [Laravel](https://laravel.com/docs/12.x)
 - [MySQL](https://www.mysql.com/)/[MariaDB](https://mariadb.org/)
 - [Composer](https://getcomposer.org)
 - [Artisan CLI](https://laravel.com/docs/12.x/artisan)
