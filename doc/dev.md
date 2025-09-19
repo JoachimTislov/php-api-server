@@ -1,43 +1,28 @@
 # Development
 
-[Vue template - starter kit](https://github.com/laravel/vue-starter-kit)
-[budget app plan](./doc/budget-app-plan.md)
-
-The storage folder currently only contains .gitignore files ...
-
-## TODOs
-
-- Use global variables for strings to avoid destructive typos
-- Add Tailwindcss
-- Nvim php plugins
-- Setup database for development
-- Fix undefined app issues
+Expected environment is Linux (Arch Linux preferred)
+Starting point [Vue template - starter kit](https://github.com/laravel/vue-starter-kit)
+[Budget app plan](./doc/budget-app-plan.md)
 
 ## Development setup
 
 - Install [php](https://www.php.net/) and [composer](https://getcomposer.org/download/)
+- Formatter: [pretty-php](https://github.com/lkrms/pretty-php)
+- LSP: [phpactor](https://github.com/phpactor/phpactor)
 
-View [Laraval docs](https://laravel.com/docs/)
+### Database
+Production: [MariaDB](https://wiki.archlinux.org/title/MariaDB)
+Development: [MariaDB](https://wiki.archlinux.org/title/MariaDB), [Sqlite](https://www.sqlite.org/index.html) or [in memory](https://laravel.com/docs/12.x/database#in-memory-sqlite-testing)
+**Important to uncomment pdo_sqlite or pdo_mysql in /etc/php/php.ini, depending on your database choice**
+Failure to do so will cause Laravel to throw a "can't find driver" error
 
-Use [MariaDB](https://wiki.archlinux.org/title/MariaDB) or [AUR - mysql](https://aur.archlinux.org/packages/mysql)
+### Commands
 
-### Env template:
+View [Makefile](./Makefile) for more details
 
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=root
-DB_PASSWORD=
-```
+## Best Practices
 
-### Cmds
-
-**migrate:**
-```php
-php artisan migrate
-```
+- Use global variables for strings to avoid destructive typos
 
 ## Docs
 
@@ -57,9 +42,9 @@ php artisan migrate
 
 **Frontend:**
 - [Vue 3](https://vuejs.org/)
+- [shadcn-vue](https://www.shadcn-vue.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
-- [shadcn-vue](https://www.shadcn-vue.com/)
 
-View [Composer lock](./composer.lock) for more details
-
+View [Composer json](./composer.json) for more details

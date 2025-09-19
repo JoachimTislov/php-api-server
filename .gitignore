@@ -1,6 +1,6 @@
 .env
-*.sqlite*
+.env.production
 node_modules
 vendor
 build
-
+db.sqlite
