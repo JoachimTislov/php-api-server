@@ -1,7 +1,9 @@
 # Development
 
 Expected environment is Linux (Arch Linux preferred)
+
 Starting point [Vue template - starter kit](https://github.com/laravel/vue-starter-kit)
+
 [Budget app plan](./doc/budget-app-plan.md)
 
 ## Development setup
@@ -13,6 +15,7 @@ Starting point [Vue template - starter kit](https://github.com/laravel/vue-start
 ### Database
 Production: [MariaDB](https://wiki.archlinux.org/title/MariaDB)
 Development: [MariaDB](https://wiki.archlinux.org/title/MariaDB), [Sqlite](https://www.sqlite.org/index.html) or [in memory](https://laravel.com/docs/12.x/database#in-memory-sqlite-testing)
+
 **Important to uncomment pdo_sqlite or pdo_mysql in /etc/php/php.ini, depending on your database choice**
 Failure to do so will cause Laravel to throw a "can't find driver" error
 
