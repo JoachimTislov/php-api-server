@@ -11,8 +11,10 @@ Starting point [Vue template - starter kit](https://github.com/laravel/vue-start
 - Install [php](https://www.php.net/) and [composer](https://getcomposer.org/download/)
 - Formatter: [pretty-php](https://github.com/lkrms/pretty-php)
 - LSP: [phpactor](https://github.com/phpactor/phpactor)
+- Sqlite viewer: [sqlitebrowser](https://sqlitebrowser.org/dl/)
 
 ### Database
+
 - Production: [MariaDB](https://wiki.archlinux.org/title/MariaDB)
 - Development: [MariaDB](https://wiki.archlinux.org/title/MariaDB), [Sqlite](https://www.sqlite.org/index.html) or [in memory](https://laravel.com/docs/12.x/database#in-memory-sqlite-testing)
 - **Important to uncomment pdo_sqlite or pdo_mysql in /etc/php/php.ini, depending on your database choice**
@@ -29,16 +31,18 @@ View [Makefile](./Makefile) for more details
 ## Docs & Tech Stack
 
 **Backend:**
+
 - [PHP](https://www.php.net/)
 - [Laravel](https://laravel.com/docs/12.x)
 - [MySQL](https://www.mysql.com/)/[MariaDB](https://mariadb.org/)
 - [Composer](https://getcomposer.org)
 - [Artisan CLI](https://laravel.com/docs/12.x/artisan)
-    - View [script](./artisan) for more details
+  - View [script](./artisan) for more details
 - [PHPUnit](https://phpunit.de/)
 - [inertiajs](https://inertiajs.com/)
 
 **Frontend:**
+
 - [Vue 3](https://vuejs.org/)
 - [shadcn-vue](https://www.shadcn-vue.com/)
 - [TypeScript](https://www.typescriptlang.org/)
