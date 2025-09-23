@@ -13,13 +13,10 @@ return [
     ],
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
+            'driver' => 'eloquent',  // database
+            /* 'table' => env('AUTH_USERS_TABLE', 'users'), for "database" driver */
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
     ],
     'passwords' => [
         'users' => [

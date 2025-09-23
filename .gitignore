@@ -6,3 +6,5 @@ build
 ssr
 db.sqlite
 database.sqlite
+schema
+hot

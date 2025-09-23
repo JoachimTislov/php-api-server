@@ -1,10 +1,20 @@
 # Development
 
-Expected environment is Linux (Arch Linux preferred)
+Development environment is Linux
 
-Starting point [Vue template - starter kit](https://github.com/laravel/vue-starter-kit)
+Template: [Vue starter kit](https://github.com/laravel/vue-starter-kit)
+- [Deep dive](https://www.youtube.com/watch?v=phaBzRIioAw)
 
 [Budget app plan](budget-app-plan.md)
+
+## TODOs
+
+- Create deploy workflow to sync app, bootstrap, config, public, resources and routes folders
+- Finish sync script
+
+## Production
+
+- Manually update both vendor folder and database schema
 
 ## Development setup
 
