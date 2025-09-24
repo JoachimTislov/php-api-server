@@ -1,4 +1,4 @@
-name: Deploy
+name: Vue
 on:
   push:
     branches: [main]
@@ -21,15 +21,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm i
-
       - name: Building the frontend
         run: npm run build
-
       - name: Install lftp
-        run: sudo apt-get install -y lftp
-
+        run: sudo apt-get update && sudo apt-get install -y lftp
       - name: Deploy to server
-        run: sh sync-remote.sh public/build /public_html/build
+        run: bash sync-remote.sh public/build /public_html/build
         env:
           HOST: ${{ secrets.DEPLOY_HOST }}
           USERNAME: ${{ secrets.DEPLOY_USERNAME }}

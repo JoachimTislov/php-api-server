@@ -46,8 +46,10 @@ jobs:
         run: php artisan test
       - name: Deploy to server
         if: ${{ github.event_name == 'push' }}
-        run: sh sync-remote.sh app,bootstrap,config,resources/views,routes /public_html/budget
-        with:
+        run: |
+          sudo apt-get update && sudo apt-get install -y lftp
+          bash sync-remote.sh app,bootstrap,config,resources/views,routes /public_html/budget
+        env:
           HOST: ${{ secrets.DEPLOY_HOST }}
           USERNAME: ${{ secrets.DEPLOY_USERNAME }}
           PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
