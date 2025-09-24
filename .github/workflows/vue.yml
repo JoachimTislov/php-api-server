@@ -26,7 +26,7 @@ jobs:
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
       - name: Deploy to server
-        run: bash sync-remote.sh public/build /public_html/build
+        run: bash sync-remote.sh public/build /public_html/budget
         env:
           HOST: ${{ secrets.DEPLOY_HOST }}
           USERNAME: ${{ secrets.DEPLOY_USERNAME }}
