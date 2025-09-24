@@ -1,9 +1,13 @@
+include .env
+
+SQLITE := 'database/database.sqlite'
+
 .PHONY: deps
 deps:
 	@# Install deps if not already installed
 	@if [ ! -d vendor ]; then echo "Installing backend dependencies"; composer i &> /dev/null; fi
 	@if [ ! -d node_modules ]; then echo "Installing frontend dependencies"; npm i &> /dev/null; fi
-	@if [ ! -f database/database.sqlite ]; then echo "Creating SQLite database and running migrations"; touch database/database.sqlite; php artisan migrate; fi
+	@if [ ! -f $(SQLITE) ] && [ "$$DB_DATABASE" == $(SQLITE) ]; then echo "Creating SQLite database and running migrations"; touch database/database.sqlite; php artisan migrate; fi
 
 .PHONY: dev-ssr
 dev-ssr: deps
