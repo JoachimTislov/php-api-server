@@ -1,0 +1,36 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+    paths:
+      - resources/js/**
+      - resources/css/**
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        node-version: [24.2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm i
+
+      - name: Building the frontend
+        run: npm run build
+
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
+      - name: Deploy to server
+        run: sh sync-remote.sh public/build /public_html/build
+        env:
+          HOST: ${{ secrets.DEPLOY_HOST }}
+          USERNAME: ${{ secrets.DEPLOY_USERNAME }}
+          PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
